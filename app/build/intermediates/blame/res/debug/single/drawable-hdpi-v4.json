@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_delete_white.png",
+        "source": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/src/main/res/drawable-hdpi/ic_delete_white.png"
+    },
+    {
+        "merged": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_download.png",
+        "source": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/src/main/res/drawable-hdpi/ic_download.png"
+    },
+    {
+        "merged": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/loading.gif",
+        "source": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/src/main/res/drawable-hdpi/loading.gif"
+    }
+]

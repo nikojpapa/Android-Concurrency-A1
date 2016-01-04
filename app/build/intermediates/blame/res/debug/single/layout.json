@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/build/intermediates/res/merged/debug/layout/image_detail_swipe_activity.xml",
+        "source": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/src/main/res/layout/image_detail_swipe_activity.xml"
+    },
+    {
+        "merged": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/build/intermediates/res/merged/debug/layout/display_images_activity.xml",
+        "source": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/src/main/res/layout/display_images_activity.xml"
+    },
+    {
+        "merged": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/build/intermediates/res/merged/debug/layout/download_images_activity.xml",
+        "source": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/src/main/res/layout/download_images_activity.xml"
+    },
+    {
+        "merged": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/build/intermediates/res/merged/debug/layout/fragment_collection_detail.xml",
+        "source": "/Users/nikojpapa/Box Sync/AndroidStudioProjects/A1-Android-App/app/src/main/res/layout/fragment_collection_detail.xml"
+    }
+]

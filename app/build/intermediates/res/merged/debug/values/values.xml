@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="androidcolors">
+            <item>@color/blue</item>
+            <item>@color/purple</item>
+            <item>@color/green</item>
+            <item>@color/orange</item>
+            <item>@color/red</item>
+            <item>@color/darkblue</item>
+            <item>@color/darkpurple</item>
+            <item>@color/darkgreen</item>
+            <item>@color/darkorange</item>
+            <item>@color/darkred</item>
+        </integer-array>
+    <color name="background_color">#FF33B5E5</color>
+    <item name="black" type="color">#000000</item>
+    <item name="blue" type="color">#FF33B5E5</item>
+    <color name="button_color_selected">#ff5b88f0</color>
+    <color name="button_color_unselected">#ff63706c</color>
+    <color name="button_text">#ffffffff</color>
+    <item name="darkblue" type="color">#FF0099CC</item>
+    <item name="darkgreen" type="color">#FF669900</item>
+    <item name="darkorange" type="color">#FFFF8800</item>
+    <item name="darkpurple" type="color">#FF9933CC</item>
+    <item name="darkred" type="color">#FFCC0000</item>
+    <color name="fab">#33b5e5</color>
+    <item name="green" type="color">#15FF00</item>
+    <item name="orange" type="color">#FFFFBB33</item>
+    <item name="purple" type="color">#FFAA66CC</item>
+    <item name="red" type="color">#FFFF4444</item>
+    <color name="theme_primary">#127ef8</color>
+    <declare-styleable name="AppTheme"><attr format="reference" name="textAppearanceFinish"/></declare-styleable>
+    <declare-styleable name="FabView"><attr format="reference" name="fabDrawable"/><attr format="reference" name="fabColor"/><attr format="integer" name="fabMarginLeft"/><attr format="integer" name="fabMarginTop"/><attr format="integer" name="fabMarginRight"/><attr format="integer" name="fabMarginBottom"/></declare-styleable>
+    <dimen name="button_padding">5dp</dimen>
+    <dimen name="tablerow_padding">30dp</dimen>
+    <string name="add_url">Add URL</string>
+    <string name="app_name">DownloadImagesViewer</string>
+    <string name="bound">Bound Service</string>
+    <string name="clear_directory">Delete Downloaded Image(s)</string>
+    <string name="defaultURL">http://www.dre.vanderbilt.edu/~schmidt/robot.png;http://www.dre.vanderbilt.edu/~schmidt/ka.png</string>
+    <string name="detailed_picture_view_desc_string">desc</string>
+    <string name="download_and_display_images">Download and Display Image(s)</string>
+    <string name="download_images_activity">DownLoadImagesActivity</string>
+    <string name="enter_url">Enter URL</string>
+    <string name="started">Started Service</string>
+    <string name="swipe_activity">SwipeListDisplay</string>
+</resources>
