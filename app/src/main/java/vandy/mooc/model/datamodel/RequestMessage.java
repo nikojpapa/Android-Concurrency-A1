@@ -41,19 +41,25 @@ public class RequestMessage extends RequestReplyMessageBase {
 
         // Set replyMessenger into the Message's replyTo field.
         // TODO -- you fill in here.
+        requestMessage.setMessenger(replyMessenger);
 
         // Create a new Bundle and set it as the "data" for the
         // RequestMessage.
         // TODO -- you fill in here.
+        Bundle bundle= new Bundle();
+        requestMessage.setData(bundle);
 
         // Set the URL to the image file into the Bundle.
         // TODO -- you fill in here.
+        bundle.putString("URL", url.toString());
 
         // Set the pathname to the directory into the Bundle.
         // TODO -- you fill in here.
+        bundle.putString("pathname", directoryPathname.toString());
 
         // Set the request code into the Bundle.
         // TODO -- you fill in here.
+        bundle.putInt("requestCode", requestCode);
 
         // Return the message to the caller.
         return requestMessage;

@@ -1,17 +1,24 @@
 package vandy.mooc.model.services;
 
+import vandy.mooc.common.Utils;
+import vandy.mooc.model.ImageModelImpl;
 import vandy.mooc.model.datamodel.ReplyMessage;
 import vandy.mooc.model.datamodel.RequestMessage;
 import vandy.mooc.utils.NetUtils;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
 import android.util.Log;
+
+import java.io.InputStream;
+import java.net.URL;
 
 /**
  * An IntentService that downloads an image requested via data in an
@@ -77,19 +84,32 @@ public class DownloadImagesStartedService
 
         // Extract the URL for the image to download.
         // TODO -- you fill in here.
+        String url= requestMessage.getData().getString("URL");
 
         // Download the requested image.
         // TODO -- you fill in here.
+        Bitmap image;
+        try {
+            InputStream is= (InputStream) new URL(url).getContent();
+            image= BitmapFactory.decodeStream(is);
+        } catch (Exception e) {
+            Log.e(TAG,
+                    "Error downloading image");
+            e.printStackTrace();
+        }
 
         // Extract the request code.
         // TODO -- you fill in here.
+        int requestCode= requestMessage.getData().getInt("requestCode");
 
         // Extract the Messenger stored in the RequestMessage.
         // TODO -- you fill in here.
+        Messenger messenger= requestMessage.getMessenger();
 
         // Send the path to the image file back to the
         // MainActivity via the messenger.
         // TODO -- you fill in here.
+        messenger.send();
     }
 
     /**
@@ -103,11 +123,13 @@ public class DownloadImagesStartedService
         // Call the makeReplyMessage() factory method to create
         // Message.
         // TODO -- you fill in here.
+        ReplyMessage replyMessage= ReplyMessage.makeReplyMessage(pathToImageFile, url, requestCode);
         
         try {
             // Send the path to the image file back to the
             // ImageModelImpl's Handler via the Messenger.
             // TODO -- you fill in here.
+            messenger.send(Message.obtain(ImageModelImpl.class, 2, pathToImageFile);
         } catch (RemoteException e) {
             Log.e(getClass().getName(),
                   "Exception while sending reply message back to Activity.",
