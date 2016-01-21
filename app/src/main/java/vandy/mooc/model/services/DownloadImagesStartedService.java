@@ -1,6 +1,7 @@
 package vandy.mooc.model.services;
 
 import vandy.mooc.common.Utils;
+import vandy.mooc.model.ImageModel;
 import vandy.mooc.model.ImageModelImpl;
 import vandy.mooc.model.datamodel.ReplyMessage;
 import vandy.mooc.model.datamodel.RequestMessage;
@@ -84,23 +85,15 @@ public class DownloadImagesStartedService
 
         // Extract the URL for the image to download.
         // TODO -- you fill in here.
-        String url= requestMessage.getData().getString("URL");
+        Uri url= requestMessage.getImageURL();
 
         // Download the requested image.
         // TODO -- you fill in here.
-        Bitmap image;
-        try {
-            InputStream is= (InputStream) new URL(url).getContent();
-            image= BitmapFactory.decodeStream(is);
-        } catch (Exception e) {
-            Log.e(TAG,
-                    "Error downloading image");
-            e.printStackTrace();
-        }
+        NetUtils.downloadImage(getApplicationContext(), url, requestMessage.getDirectoryPathname());
 
         // Extract the request code.
         // TODO -- you fill in here.
-        int requestCode= requestMessage.getData().getInt("requestCode");
+        int requestCode= requestMessage.getRequestCode();
 
         // Extract the Messenger stored in the RequestMessage.
         // TODO -- you fill in here.
