@@ -102,7 +102,7 @@ public class DownloadImagesStartedService
         // Send the path to the image file back to the
         // MainActivity via the messenger.
         // TODO -- you fill in here.
-        messenger.send();
+        sendPath(messenger, requestMessage.getImagePathname(), url, requestCode);
     }
 
     /**
@@ -122,7 +122,7 @@ public class DownloadImagesStartedService
             // Send the path to the image file back to the
             // ImageModelImpl's Handler via the Messenger.
             // TODO -- you fill in here.
-            messenger.send(Message.obtain(ImageModelImpl.class, 2, pathToImageFile);
+            messenger.send(replyMessage.getMessage());
         } catch (RemoteException e) {
             Log.e(getClass().getName(),
                   "Exception while sending reply message back to Activity.",
